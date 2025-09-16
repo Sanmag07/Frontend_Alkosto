@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alkosto Clone</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🔹 Barra superior -->
+  <div class="top-links">
+    <div class="container d-flex justify-content-end gap-4">
+      <a href="#">Hiperofertas</a>
+      <a href="#">Venta: (601) 746 8001</a>
+      <a href="#">Servicio: (601) 407 3033</a>
+      <a href="#">Sigue tu pedido</a>
+      <a href="#">Nuestras tiendas</a>
+      <a href="#">Catálogo</a>
+      <a href="#">Ayuda</a>
+    </div>
+  </div>
+
+  <!-- 🔹 Barra principal -->
+  <div class="top-bar">
+    <!-- Logo -->
+    <img src="templates/alkosto-logo-header.webp" class="logo-img" alt="Logo Alkosto">
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" class="form-control" placeholder="¿Qué buscas hoy?">
+    </div>
+
+    <!-- Actions -->
+    <div class="top-actions">
+      <a href="#"><i class="bi bi-person"></i> Mi cuenta</a>
+      <a href="#"><i class="bi bi-cart"></i> Mi carrito</a>
+    </div>
+  </div>
+
+  <!-- 🔹 Pop-up de Mi cuenta -->
+<div id="account-popup" class="account-popup">
+  <div class="popup-content">
+    <h5>Ingresar o crear cuenta</h5>
+    <p>Accede a tus datos personales, pedidos y solicitudes de devolución.</p>
+    <input type="email" placeholder="Correo electrónico" class="form-control mb-3">
+    <button class="btn btn-warning w-100">Continuar</button>
+
+    <hr class="my-3">
+
+    <div class="extra-options">
+      <a href="#">Sigue tu pedido</a>
+      <a href="#">Descarga tu factura</a>
+    </div>
+  </div>
+</div>
+
+  <!-- 🔹 Menú de categorías -->
+  <div class="category-menu px-4 py-2 d-flex justify-content-center">
+    <a href="#">Celulares</a>
+    <a href="#">Computadores</a>
+    <a href="#">Electrodomésticos</a>
+    <a href="#">TV</a>
+    <a href="#">Accesorios</a>
+    <a href="#">Videojuegos</a>
+    <a href="#">Audio</a>
+    <a href="#">Cámaras</a>
+    <a href="#">Pines</a>
+    <a href="#">Hogar</a>
+    <a href="#">Casa Inteligente</a>
+    <a href="#">Deportes</a>
+    <a href="#">Llantas y Motos</a>
+    <a href="#">Juguetes</a>
+    <a href="#">Otros</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="d-flex main-wrapper">
+    <!-- Slider Section -->
+    <div class="slider-section">
+      <div id="mainCarousel" class="carousel slide main-slider" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="templates/slider1.webp" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="templates/slider2.webp" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="templates/slider3.webp" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="templates/slider4.webp" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="templates/slider5.webp" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Icons Grid -->
+    <div class="icon-grid bg-white rounded">
+      <div class="row row-cols-6 category-grid">
+        <div class="col"><a href="#"><img src="templates/celulares.webp"><div>Celulares</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-refrigeracion.webp"><div>Electro</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-computadores.webp"><div>Computo e impresión</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-televisores.webp"><div>Televisores</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-videojuegos.webp"><div>Videojuegos</div></a></div>
+        <div class="col"><a href="#"><img src="templates/portatiles-gaming-2.webp"><div>Zona Gamer</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-domotica-2.webp"><div>Domótica</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-tarjetas-pines.webp"><div>Pines</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-audio.webp"><div>Audio</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-electrohogar.webp"><div>Electrohogar</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-smartwatch.webp"><div>Smartwatch</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-audifonos.webp"><div>Audífonos</div></a></div>
+        <div class="col"><a href="#"><img src="templates/accesorios.webp"><div>Accesorios</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-camera-2.webp"><div>Cámaras</div></a></div>
+        <div class="col"><a href="#"><img src="templates/juguetes-2.webp"><div>Juguetes</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-deportes.webp"><div>Deportes</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-muebles.webp"><div>Muebles</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-colchones.webp"><div>Colchones</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-llantas.webp"><div>Llantas</div></a></div>
+        <div class="col"><a href="#"><img src="templates/header-foto-baterias.webp"><div>Hogar</div></a></div>
+        <div class="col"><a href="#"><img src="templates/ropa-hogar-2.webp"><div>Ropa hogar</div></a></div>
+        <div class="col"><a href="#"><img src="templates/proyectores-2.webp"><div>Proyectores</div></a></div>
+        <div class="col"><a href="#"><img src="templates/medios-pago-6.webp"><div>Ofertas con bancos</div></a></div>
+        <div class="col"><a href="#"><img src="templates/c-hiperofertas.webp"><div>Hiperofertas</div></a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo Section -->
+  <div class="promo-section">
+    <img src="templates/slider 6.webp" class="promo-image" />
+  </div>
+
+<!-- 🔹 Franja horizontal de beneficios -->
+<div class="benefits-bar">
+  <a href="#" class="benefit-item">
+    <img src="/templates/mitad.webp" alt="Mitad de tu compra">
+    <span>Participa por la mitad de tu compra</span>
+  </a>
+  <a href="#" class="benefit-item">
+    <img src="/templates/envio.webp" alt="Envío gratis">
+    <span>Envío gratis a 900 municipios</span>
+  </a>
+  <a href="#" class="benefit-item">
+    <img src="/templates/bb-30dias.webp" alt="Cambios y devoluciones">
+    <span>30 días para cambios y devoluciones</span>
+  </a>
+  <a href="#" class="benefit-item">
+    <img src="/templates/bb-seguro.webp" alt="Seguro gratis celulares">
+    <span>Seguro gratis en celulares</span>
+  </a>
+</div>
+
+<!-- Sección productos (Carrusel mejorado) -->
+<div class="expotronika-section">
+  <div class="expotronika-carousel">
+    <img src="templates/expotronika.webp" alt="expotronika" class="expotronika">
+    <div class="promo-subtitle">Ofertas irresistibles</div>
+
+    <div class="carousel-track" id="product-carousel-track">
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+
+        <!-- Productos -->
+        <div class="product-card" data-rating="0.0" data-reviews="0">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/honor.webp" alt="Celular HONOR X6c 256GB 4G Negro">
+          </div>
+            <h3 class="product-title">Celular HONOR X6c 256GB 4G Negro</h3>
+          <div class="rating"> <div class="product-rating">☆☆☆☆☆</div>
+            <span class="rating-value">0.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(0)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$1.049.050</span>
+              <span class="discount-badge">-33%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$699.050</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="product-card" data-rating="5.0" data-reviews="258">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/macbook.webp" alt="MacBook Air 13'' M1 8GB 256GB">
+          </div>
+          <h3 class="product-title">MacBook Air de 13" Chip M1 RAM 8GB 256GB SSD Gris Espacial</h3>
+          <div class="rating"><div class="product-rating">⭐⭐⭐⭐⭐</div>
+            <span class="rating-value">5.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(258)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$6.659.000</span>
+              <span class="discount-badge">-62%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$2.489.000</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="product-card" data-rating="0.0" data-reviews="0">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/tv tcl 50.webp" alt="TV TCL 50 Pulgadas QLED Google TV">
+          </div>
+          <h3 class="product-title">TV TCL 50" 50S5K QLED Smart Google TV FHD</h3>
+          <div class="rating"><div class="product-rating">⭐⭐⭐⭐⭐</div>
+            <span class="rating-value">0.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(0)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$2.299.000</span>
+              <span class="discount-badge">-52%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$1.099.030</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="product-card" data-rating="0.0" data-reviews="0">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/lavadora.webp" alt="Lavadora LG 19 Kg Carga Superior">
+          </div>
+          <h3 class="product-title">Lavadora LG Carga Superior 19 Kg WT19MVTB Negra</h3>
+          <div class="rating"><div class="product-rating">☆☆☆☆☆</div>
+            <span class="rating-value">0.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(0)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$3.399.000</span>
+              <span class="discount-badge">-47%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$1.798.030</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="product-card" data-rating="0.0" data-reviews="0">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/consola.webp" alt="Consola Nintendo Switch">
+          </div>
+          <h3 class="product-title">Consola Nintendo Switch™ con Joy-Con Azul / Rojo Neón</h3>
+          <div class="rating"><div class="product-rating">⭐⭐⭐⭐⭐</div>
+            <span class="rating-value">0.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(0)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$2.200.000</span>
+              <span class="discount-badge">-28%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$1.590.000</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="product-card" data-rating="4.9" data-reviews="15">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/reloj HUAWEI.webp" alt="Reloj HUAWEI Watch Fit SE Rosado">
+          </div>
+          <h3 class="product-title">Reloj HUAWEI Watch Fit SE Rosado</h3>
+          <div class="rating"><div class="product-rating">⭐⭐⭐⭐⭐</div>
+            <span class="rating-value">4.9</span>
+            <div class="stars"></div>
+            <span class="reviews">(15)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$449.000</span>
+              <span class="discount-badge">-37%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$279.900</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="product-card" data-rating="5.0" data-reviews="10">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/tostadora.webp" alt="Tostadora BLACK+DECKER 2 Puestos TR0012SS Gris">
+          </div>
+          <h3 class="product-title">Tostadora BLACK+DECKER 2 Puestos TR0012SS Gris</h3>
+          <div class="rating"><div class="product-rating">☆☆☆☆☆</div>
+            <span class="rating-value">5.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(10)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$189.900</span>
+              <span class="discount-badge">-63%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$69.900</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slide 2 (puedes ajustar productos adicionales) -->
+      <div class="carousel-slide">
+        <!-- Clona o crea más product-card igual que arriba -->
+        <div class="product-card" data-rating="5.0" data-reviews="32">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/producto8.webp" alt="Producto 8">
+          </div>
+          <h3 class="product-title">Producto 8 Genérico Ejemplo</h3>
+          <div class="rating">
+            <span class="rating-value">5.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(32)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$999.000</span>
+              <span class="discount-badge">-25%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$749.000</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-rating="3.5" data-reviews="7">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/producto9.webp" alt="Producto 9">
+          </div>
+          <h3 class="product-title">Producto 9 Demo Con Nombre Largo Para Probar Truncado</h3>
+          <div class="rating">
+            <span class="rating-value">3.5</span>
+            <div class="stars"></div>
+            <span class="reviews">(7)</span>
+          </div>
+          <div class="price-block">
+            <div class="new-line single">
+              <span class="new-price">$120.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-rating="4.2" data-reviews="54">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/producto10.webp" alt="Producto 10">
+          </div>
+          <h3 class="product-title">Producto 10</h3>
+          <div class="rating">
+            <span class="rating-value">4.2</span>
+            <div class="stars"></div>
+            <span class="reviews">(54)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$499.000</span>
+              <span class="discount-badge">-18%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$409.000</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-rating="4.0" data-reviews="11">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/producto11.webp" alt="Producto 11">
+          </div>
+          <h3 class="product-title">Producto 11</h3>
+          <div class="rating">
+            <span class="rating-value">4.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(11)</span>
+          </div>
+          <div class="price-block">
+            <div class="new-line single">
+              <span class="new-price">$199.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-rating="2.8" data-reviews="4">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/producto12.webp" alt="Producto 12">
+          </div>
+          <h3 class="product-title">Producto 12</h3>
+          <div class="rating">
+            <span class="rating-value">2.8</span>
+            <div class="stars"></div>
+            <span class="reviews">(4)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$89.000</span>
+              <span class="discount-badge">-10%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$79.900</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-rating="5.0" data-reviews="3">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/producto13.webp" alt="Producto 13">
+          </div>
+          <h3 class="product-title">Producto 13</h3>
+          <div class="rating">
+            <span class="rating-value">5.0</span>
+            <div class="stars"></div>
+            <span class="reviews">(3)</span>
+          </div>
+          <div class="price-block">
+            <div class="new-line single">
+              <span class="new-price">$59.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-rating="4.7" data-reviews="21">
+          <button class="btn-add" aria-label="Agregar al carrito">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <div class="image-wrap">
+            <img src="templates/producto14.webp" alt="Producto 14">
+          </div>
+          <h3 class="product-title">Producto 14</h3>
+          <div class="rating">
+            <span class="rating-value">4.7</span>
+            <div class="stars"></div>
+            <span class="reviews">(21)</span>
+          </div>
+          <div class="price-block has-discount">
+            <div class="first-line">
+              <span class="old-price">$129.000</span>
+              <span class="discount-badge">-12%</span>
+            </div>
+            <div class="new-line">
+              <span class="new-price">$112.900</span>
+              <span class="hoy-tag">Hoy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="carousel-dots" id="product-carousel-dots">
+      <span class="dot active" data-slide="0" aria-label="Ir al slide 1" role="button" tabindex="0"></span>
+      <span class="dot" data-slide="1" aria-label="Ir al slide 2" role="button" tabindex="0"></span>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
